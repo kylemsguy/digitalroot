@@ -12,6 +12,8 @@ public class DigitalRoot{
 		Scanner s = new Scanner(System.in).useDelimiter(" ");
 		ArrayList<Integer> numbers = new ArrayList<>();
 
+		int i = s.nextInt();
+
 		while(true){
 			numbers.add(s.nextInt());
 		}
