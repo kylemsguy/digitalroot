@@ -9,11 +9,23 @@ public class DigitalRoot {
 		this.start = sum(start);
 	}
 
+	public DigitalRoot(List<Integer> start){
+		this.start = sum(start);
+	}
+
 	public int getRoot(){
 		return calcRoot(start);
 	}
 
 	private int sum(int ary[]){
+		int total = 0;
+		for(int i : ary){
+			total += i;
+		}
+		return total;
+	}
+
+	private int sum(List<Integer> ary){
 		int total = 0;
 		for(int i : ary){
 			total += i;
@@ -41,9 +53,8 @@ public class DigitalRoot {
 	}
 
 	public static void main(String[] args) {
-		DigitalRoot dr = new DigitalRoot();
 		Scanner s = new Scanner(System.in);
-		ArrayList<Integer> numbers = new ArrayList<>();
+		List<Integer> numbers = new ArrayList<>();
 		int next = 0;
 
 		System.out.println("Please enter the numbers one at a time. Enter a number out of range to end. ");
@@ -56,6 +67,6 @@ public class DigitalRoot {
 
 		s.close();
 
-		System.out.println()
+		System.out.println(new DigitalRoot(numbers).getRoot());
 	}
 }
